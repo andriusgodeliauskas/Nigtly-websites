@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | Velvet Cocoa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #1a1512; color: #f3e5dc; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        .product-card {
+            transition: all 0.4s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference">
+        <a href="index.html" class="text-2xl font-bold tracking-widest text-[#d4af37]">VELVET</a>
+        <div class="space-x-8 text-sm uppercase tracking-widest text-white">
+            <a href="about.html" class="hover:text-[#d4af37]">Story</a>
+            <a href="products.html" class="text-[#d4af37]">Collection</a>
+            <a href="#" class="hover:text-[#d4af37]">Visit</a>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-10 px-6 text-center">
+        <h1 class="text-5xl mb-4">The 2026 Collection</h1>
+        <p class="opacity-60">Limited batches. Numbered by hand.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 mb-20">
+        <!-- Product 1 -->
+        <div class="product-card bg-[#2a221e] p-8 rounded-xl border border-white/5 group hover:border-[#d4af37]">
+            <div class="h-64 bg-black/30 mb-6 flex items-center justify-center text-4xl">🍫</div>
+            <h3 class="text-2xl mb-2">Midnight 85%</h3>
+            <p class="text-sm opacity-60 mb-6">Pure Ecuadorian cacao. Notes of tobacco and dried cherry.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-xl">€12.00</span>
+                <button class="text-[#d4af37] border border-[#d4af37] px-4 py-2 rounded-full hover:bg-[#d4af37] hover:text-black transition">Add</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card bg-[#2a221e] p-8 rounded-xl border border-white/5 group hover:border-[#d4af37]">
+            <div class="h-64 bg-black/30 mb-6 flex items-center justify-center text-4xl">🧂</div>
+            <h3 class="text-2xl mb-2">Sea Salt Caramel</h3>
+            <p class="text-sm opacity-60 mb-6">Brittany salt crystals meeting slow-cooked caramel.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-xl">€14.00</span>
+                <button class="text-[#d4af37] border border-[#d4af37] px-4 py-2 rounded-full hover:bg-[#d4af37] hover:text-black transition">Add</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card bg-[#2a221e] p-8 rounded-xl border border-white/5 group hover:border-[#d4af37]">
+            <div class="h-64 bg-black/30 mb-6 flex items-center justify-center text-4xl">🌶️</div>
+            <h3 class="text-2xl mb-2">Aztec Chili</h3>
+            <p class="text-sm opacity-60 mb-6">A warming heat that builds slowly. Ancient recipe.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-xl">€13.50</span>
+                <button class="text-[#d4af37] border border-[#d4af37] px-4 py-2 rounded-full hover:bg-[#d4af37] hover:text-black transition">Add</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
