@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Cocoa | Premium Handcrafted Chocolate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1512; /* Dark Chocolate */
+            color: #f3e5dc; /* Cream */
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-spacer {
+            height: 300vh; /* Long scroll area */
+        }
+
+        .sticky-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .bean-placeholder {
+            width: 300px;
+            height: 450px;
+            background: linear-gradient(145deg, #4a3b32, #2e231e);
+            border-radius: 150px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: rgba(255,255,255,0.2);
+            border: 2px solid #d4af37; /* Gold */
+        }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 20px;
+            padding: 20px;
+        }
+        .bento-item {
+            background: #2a221e;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+        .bento-large { grid-column: span 8; }
+        .bento-tall { grid-column: span 4; grid-row: span 2; }
+        .bento-small { grid-column: span 4; }
+
+        /* Kinetic Type */
+        .kinetic-text {
+            font-size: 8vw;
+            line-height: 0.9;
+            text-transform: uppercase;
+            opacity: 0.2;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference">
+        <div class="text-2xl font-bold tracking-widest text-[#d4af37]">VELVET</div>
+        <div class="space-x-8 text-sm uppercase tracking-widest text-white">
+            <a href="#" class="hover:text-[#d4af37]">Story</a>
+            <a href="#" class="hover:text-[#d4af37]">Collection</a>
+            <a href="#" class="hover:text-[#d4af37]">Visit</a>
+            <button class="border border-white px-4 py-2 rounded-full">EN</button>
+        </div>
+    </nav>
+
+    <!-- HERO SCROLLYTELLING -->
+    <div class="sticky-container">
+        <div class="bean-placeholder" id="hero-obj">
+            3D BEAN
+        </div>
+        <h1 class="absolute text-center opacity-0 transform translate-y-10" id="hero-text-1" style="font-size: 4rem;">Nature's Gift</h1>
+        <h1 class="absolute text-center opacity-0 transform translate-y-10" id="hero-text-2" style="font-size: 4rem;">Refined by Time</h1>
+        <h1 class="absolute text-center opacity-0 transform translate-y-10" id="hero-text-3" style="font-size: 6rem; color:#d4af37;">VELVET COCOA</h1>
+    </div>
+
+    <!-- Spacer for scroll -->
+    <div class="hero-spacer"></div>
+
+    <!-- CONTENT SECTION -->
+    <section class="relative z-20 bg-[#1a1512] py-20 px-10">
+        
+        <!-- KINETIC TYPE -->
+        <div class="overflow-hidden py-10">
+            <div class="kinetic-text" id="kinetic-1">Taste The Origin</div>
+        </div>
+
+        <!-- BENTO GRID -->
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl mb-10 text-[#d4af37]">The Collection</h2>
+            <div class="bento-grid">
+                <div class="bento-item bento-large bg-[url('https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale hover:grayscale-0 transition-all">
+                    <!-- Dark Chocolate Image -->
+                </div>
+                <div class="bento-item bento-tall p-8 flex-col items-start text-left">
+                    <h3 class="text-3xl mb-4">Limited Edition</h3>
+                    <p class="text-sm opacity-70">Aged in oak barrels for 6 months. A distinct flavor profile.</p>
+                    <button class="mt-auto text-[#d4af37] border-b border-[#d4af37] pb-1">Shop Now</button>
+                </div>
+                <div class="bento-item bento-small">Sea Salt</div>
+                <div class="bento-item bento-small">Chili Red</div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-black py-20 text-center text-opacity-50 text-white">
+        <p>© 2026 Velvet Cocoa. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Timeline for Hero
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".hero-spacer",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+            }
+        });
+
+        // 1. Bean rotates
+        tl.to("#hero-obj", { rotation: 90, scale: 0.8, duration: 1 })
+          .to("#hero-text-1", { opacity: 1, y: 0, duration: 0.5 }, "<")
+          .to("#hero-text-1", { opacity: 0, y: -50, duration: 0.5 }, "+=0.5")
+          
+        // 2. Bean splits (simulated by scale/width change)
+          .to("#hero-obj", { width: "100%", borderRadius: 0, height: "100vh", backgroundColor: "#3e2b22", duration: 1 })
+          .to("#hero-text-2", { opacity: 1, y: 0, duration: 0.5 }, "<")
+          .to("#hero-text-2", { opacity: 0, y: -50, duration: 0.5 }, "+=0.5")
+
+        // 3. Final Reveal
+          .to("#hero-obj", { opacity: 0, duration: 1 })
+          .to("#hero-text-3", { opacity: 1, scale: 1.2, duration: 1 }, "<");
+
+        // Kinetic Text
+        gsap.to("#kinetic-1", {
+            x: -200,
+            scrollTrigger: {
+                trigger: "#kinetic-1",
+                scrub: 2
+            }
+        });
+    </script>
+</body>
+</html>
